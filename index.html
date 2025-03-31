@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0de4f50d81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Image/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Abhishek</span><br> from kathmandu</h1>
+            </div>
+        </div>
+    </div>
+    <!--------about------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/photo.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ea accusamus maiores labore recusandae voluptatum voluptates quibusdam tenetur! Tempore molestiae totam illo praesentium eos? Dolore unde quam doloremque iure et.
+                    Aspernatur, dolorem. Iure praesentium eius excepturi fugiat aliquam, sunt numquam voluptates, pariatur est placeat ullam nisi deserunt, dolores dolorem eaque aut amet natus illum saepe corporis facere laudantium? Recusandae, dolor.
+                    Cupiditate fugiat facilis corrupti quas natus inventore, esse sunt non, beatae nemo quisquam, quasi accusamus. Sed voluptas consectetur cupiditate earum id sapiente minima magnam voluptatibus, ut ipsum cum veniam inventore?
+                    Ullam, eius optio dolore soluta ad eligendi. Animi velit fugiat quae officiis sint dolor distinctio esse odit molestias? In, repellendus explicabo. Id ad quidem cupiditate et, necessitatibus eveniet fuga cum!
+                    Debitis accusamus, iste nisi magni suscipit itaque porro temporibus. Eos molestias facilis cum, hic, ipsam laboriosam ducimus, distinctio reiciendis aspernatur saepe quia? Accusamus delectus tempora similique nulla, ad pariatur. Sit.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designer web/app interface</li>
+                            <li><span>web development</span><br>web app development</li>
+                            <li><span>App development</span><br>building android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-current</span><br>Designer web/app interface</li>
+                            <li><span>web development</span><br>web app development</li>
+                            <li><span>App development</span><br>building android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designer web/app interface</li>
+                            <li><span>web development</span><br>web app development</li>
+                            <li><span>App development</span><br>building android/ios apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">my services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nemo ad alias voluptatem distinctio adipisci itaque inventore commodi quo, nostrum maxime qui deleniti. Consequatur, hic dolor? Facilis reprehenderit amet a!</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>web design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nemo ad alias voluptatem distinctio adipisci itaque inventore commodi quo, nostrum maxime qui deleniti. Consequatur, hic dolor? Facilis reprehenderit amet a!</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nemo ad alias voluptatem distinctio adipisci itaque inventore commodi quo, nostrum maxime qui deleniti. Consequatur, hic dolor? Facilis reprehenderit amet a!</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+<h1>password of fontawarsome is 123456</h1>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
